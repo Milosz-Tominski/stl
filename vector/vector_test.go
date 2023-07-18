@@ -3,7 +3,7 @@ package vector
 import "testing"
 
 
-func TestOperators(t *testing) {
+func TestOperators(t *testing.T) {
 	vec := vector[float64]([]float64{1.0, 2.0, 3.0})
 	if vec.At(0) != 1.0 {
 		t.Errorf("Expected 1.0, got %.2f", vec.At(0))
