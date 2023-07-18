@@ -30,6 +30,7 @@ func TestOperators(t *testing) {
 	vec.Erase(0)
 	if vec.At(0) != 2.0 {
 		t.Errorf("Expected 2.0, got %.2f", vec.At(0))
+	}
 	vec.Pop(2.0)
 	if vec.At(0) != 3.0 {
 		t.Errorf("Expected 2.0, got %.2f", vec.At(0))
