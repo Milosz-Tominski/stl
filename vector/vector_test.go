@@ -1,6 +1,9 @@
 package vector
 
+
 import "testing"
+
+
 
 func TestOperators(t *testing.T) {
 	vec := vector[float64]([]float64{1.0, 2.0, 3.0})
@@ -40,6 +43,8 @@ func TestOperators(t *testing.T) {
 	}
 }
 
+
+
 func TestSwap(t *testing.T) {
 	vec1 := vector[string]([]string{"Hi", "Hello", "World"})
 	vec2 := vector[string]([]string{"Go", "Lang"})
@@ -52,6 +57,8 @@ func TestSwap(t *testing.T) {
 		t.Errorf("Expected 3, got %d", vec2.Size())
 	}
 }
+
+
 
 func TestAdd(t *testing.T) {
 	vec1 := vector[string]([]string{"Hi", "Hello", "World"})
