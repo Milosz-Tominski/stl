@@ -41,6 +41,10 @@ func TestOperators(t *testing.T) {
 	if vec.At(0) != 2.0 {
 		t.Errorf("Expected 2.0, got %.2f", vec.At(0))
 	}
+	vec.Replace(5.0, 0)
+	if vec.At(0) != 5.0 {
+		t.Errorf("Expected 5.0, got %.2f", vec.At(0))
+	}
 }
 
 

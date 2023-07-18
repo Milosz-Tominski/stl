@@ -38,6 +38,8 @@ func (vector *Vector[Type]) Size() int { return vector.Length }
 
 func (vector *Vector[Type]) Display() { fmt.Printf("%#v\n", vector) }
 
+func (vector *Vector[Type]) Replace(element Type, index int) { vector.Values[index] = element }
+
 
 
 func (vector *Vector[Type]) Empty() bool {
