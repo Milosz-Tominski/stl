@@ -1,9 +1,13 @@
 package vector 
 
+
 import (
 	"fmt"
 	"errors"
 )
+
+
+
 
 type Signed interface { int | int8 | int16 | int32 | int64 }
 
@@ -16,10 +20,12 @@ type Text interface { byte | string | rune }
 type vectorType interface { Signed | Unsigned | FloatingPoint | Text | bool }
 
 
+
 type Vector[Type vectorType] struct {
 	Length int 
 	Values []Type
 }
+
 
 
 func (vector *Vector[Type]) At(index int) Type { return vector.Values[index] }
@@ -31,6 +37,7 @@ func (vector *Vector[Type]) Back() Type { return vector.Values[len(vector.Values
 func (vector *Vector[Type]) Size() int { return vector.Length }
 
 func (vector *Vector[Type]) Display() { fmt.Printf("%#v\n", vector) }
+
 
 
 func (vector *Vector[Type]) Empty() bool {
