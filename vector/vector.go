@@ -17,7 +17,7 @@ type FloatingPoint interface { float32 | float64 }
 
 type Text interface { byte | string | rune }
 
-type vectorType interface { Signed | Unsigned | FloatingPoint | Text | bool | interface }
+type vectorType interface { Signed | Unsigned | FloatingPoint | Text | bool | interface{} }
 
 
 
