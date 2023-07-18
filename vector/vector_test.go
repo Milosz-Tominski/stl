@@ -1,7 +1,6 @@
-package vector 
+package vector
 
 import "testing"
-
 
 func TestOperators(t *testing.T) {
 	vec := vector[float64]([]float64{1.0, 2.0, 3.0})
@@ -9,17 +8,17 @@ func TestOperators(t *testing.T) {
 		t.Errorf("Expected 1.0, got %.2f", vec.At(0))
 	}
 	if vec.Front() != 1.0 {
-		t.Errorf("Expected 1.0, got %.2f", vec.At(0))
+		t.Errorf("Expected 1.0, got %.2f", vec.Front())
 	}
 	if vec.Back() != 3.0 {
-		t.Errorf("Expected 3.0, got %.2f", vec.At(0))
+		t.Errorf("Expected 3.0, got %.2f", vec.Back())
 	}
 	if vec.Size() != 3 {
 		t.Errorf("Expected 3, got %d", vec.Size())
 	}
 	vec.Clear()
 	if !vec.Empty() {
-		t.Errorf("Expected clear, got full")
+		t.Errorf("Expected empty, got full")
 	}
 	vec.Push(1.0)
 	vec.Push(2.0)
@@ -33,7 +32,7 @@ func TestOperators(t *testing.T) {
 	}
 	vec.Pop(2.0)
 	if vec.At(0) != 3.0 {
-		t.Errorf("Expected 2.0, got %.2f", vec.At(0))
+		t.Errorf("Expected 3.0, got %.2f", vec.At(0))
 	}
 	vec.Insert(2.0, 0)
 	if vec.At(0) != 2.0 {
@@ -42,13 +41,13 @@ func TestOperators(t *testing.T) {
 }
 
 func TestSwap(t *testing.T) {
-	vec1 := vector[int]([]int{1,2,3})
-	vec2 := vector[int]([]int{4,5})
-	Swap(vec1, vec2)
+	vec1 := vector[int]([]int{1, 2, 3})
+	vec2 := vector[int]([]int{4, 5})
+	Swap(&vec1, &vec2)
 	if vec1.Size() != 2 {
-		t.Errorf("Expected 2, got %d", vec.Size())
+		t.Errorf("Expected 2, got %d", vec1.Size())
 	}
 	if vec2.Size() != 3 {
-		t.Errorf("Expected 3, got %d", vec.Size())
+		t.Errorf("Expected 3, got %d", vec2.Size())
 	}
 }
