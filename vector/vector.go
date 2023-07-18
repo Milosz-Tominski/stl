@@ -42,7 +42,7 @@ func (vector *Vector[Type]) Clear() {
 }
 
 
-func Swap[Type vectorType](vector1, vector2 Vector[Type]) {
+func Swap[Type vectorType](vector1, vector2 *Vector[Type]) {
 	vector1.Values, vector2.Values = vector2.Values, vector1.Values
 	vector1.Length, vector2.Length = vector2.Length, vector1.Length
 }
