@@ -43,7 +43,7 @@ func TestOperators(t *testing.T) {
 func TestSwap(t *testing.T) {
 	vec1 := vector[int]([]int{1, 2, 3})
 	vec2 := vector[int]([]int{4, 5})
-	Swap(&vec1, &vec2)
+	Swap(vec1, vec2)
 	if vec1.Size() != 2 {
 		t.Errorf("Expected 2, got %d", vec1.Size())
 	}
