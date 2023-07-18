@@ -5,26 +5,15 @@ import (
 	"errors"
 )
 
-type Signed interface {
-	int | int8 | int16 | int32 | int64
-}
+type Signed interface { int | int8 | int16 | int32 | int64 }
 
-type Unsigned interface {
-	uint | uint8 | uint16 | uint32 | uint64
-}
+type Unsigned interface { uint | uint8 | uint16 | uint32 | uint64 }
 
-type FloatingPoint interface {
-	float32 | float64
-}
+type FloatingPoint interface { float32 | float64 }
 
-type Text interface {
-	byte | string | rune
-}
+type Text interface { byte | string | rune }
 
-
-type vectorType interface {
-	Signed | Unsigned | FloatingPoint | Text | bool
-}
+type vectorType interface { Signed | Unsigned | FloatingPoint | Text | bool }
 
 
 type Vector[Type vectorType] struct {
