@@ -1,5 +1,11 @@
 package vector 
 
+import (
+	"fmt"
+	"errors"
+)
+
+
 
 type vectorType interface {
 	int | uint | float64 | string | bool
