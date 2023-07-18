@@ -36,6 +36,7 @@ func (vector *Vector[Type]) Empty() bool {
 	return true
 }
 
+
 func (vector *Vector[Type]) Clear() {
 	vector.Values = []Type{}
 	vector.Length = 0
