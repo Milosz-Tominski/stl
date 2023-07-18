@@ -17,6 +17,7 @@ type Vector[Type vectorType] struct {
 	Values []Type
 }
 
+
 func (vector *Vector[Type]) At(index int) Type { return vector.Values[index] }
 
 func (vector *Vector[Type]) Front() Type { return vector.Values[0] }
