@@ -41,20 +41,24 @@ func (vector *Vector[Type]) Clear() {
 	vector.Length = 0
 }
 
-func Swap[Type vectorType](vector1, vector2 *Vector[Type]) {
+
+func Swap[Type vectorType](vector1, vector2 Vector[Type]) {
 	vector1.Values, vector2.Values = vector2.Values, vector1.Values
 	vector1.Length, vector2.Length = vector2.Length, vector1.Length
 }
+
 
 func (vector *Vector[Type]) Push(element Type) {
 	vector.Values = append(vector.Values, element)
 	vector.Length = len(vector.Values)
 }
 
+
 func (vector *Vector[Type]) Erase(index int) {
 	vector.Values = append(vector.Values[:index], vector.Values[index+1:]...)
 	vector.Length = len(vector.Values)
 }
+
 
 func (vector *Vector[Type]) Pop(element Type) {
 	index := func(arr []Type, element Type) int {
@@ -69,6 +73,7 @@ func (vector *Vector[Type]) Pop(element Type) {
 	vector.Length = len(vector.Values)
 }
 
+
 func (vector *Vector[Type]) Insert(element Type, index int) {
 	if index >= vector.Length+1 {
 		panic(errors.New("Element cannot be inserted at this index"))
@@ -82,6 +87,7 @@ func (vector *Vector[Type]) Insert(element Type, index int) {
 	vector.Values[index] = element
 	vector.Length = len(vector.Values)
 }
+
 
 func vector[Type vectorType](arr []Type) *Vector[Type] {
 	return &Vector[Type]{
