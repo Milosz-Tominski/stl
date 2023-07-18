@@ -2,7 +2,7 @@ package vector
 
 
 type vectorType interface {
-	~int | ~uint | ~float64 | ~string | ~bool
+	int | uint | float64 | string | bool
 }
 
 
