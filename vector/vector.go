@@ -107,3 +107,8 @@ func vector[Type vectorType](arr []Type) *Vector[Type] {
 		Values: arr,
 	}
 }
+
+func Add[Type vectorType](vec1 *Vector[Type], vec2 *Vector[Type]) *Vector[Type] {
+	values := append(vector1.Values, vector2.Values...)
+	return vector[Type](values)
+}

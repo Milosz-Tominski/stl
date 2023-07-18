@@ -52,3 +52,13 @@ func TestSwap(t *testing.T) {
 		t.Errorf("Expected 3, got %d", vec2.Size())
 	}
 }
+
+func TestAdd(t *testing.T) {
+	vec1 := vector[string]([]string{"Hi", "Hello", "World"})
+	vec2 := vector[string]([]string{"Go", "Lang"})
+	vec3 := Add(vec1, vec2)
+	t.Log(vec3)
+	if vec3.Size() != 5 {
+		t.Errorf("Expected 5, got %d", vec3.Size())
+	}
+}
