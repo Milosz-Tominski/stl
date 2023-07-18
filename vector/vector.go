@@ -27,6 +27,7 @@ func (vector *Vector[Type]) Size() int { return vector.Length }
 
 func (vector *Vector[Type]) Display() { fmt.Printf("%#v\n", vector) }
 
+
 func (vector *Vector[Type]) Empty() bool {
 	if len(vector.Values) != 0 {
 		return false
